@@ -1,51 +1,56 @@
 const express = require("express");
-const path = require("path");
 const app = express();
 
-const publicPath = path.join(__dirname, "public");
 
-app.set("view engine", "ejs");
+// -------------------------------------------------------------Render EJS
 
-// app.use(express.static(publicPath))
+// app.set("view engine", "ejs");
 
-app.get("", (_, resp) => {
-  resp.sendFile(path.join(publicPath, "index.html"));
-});
+// app.get("/profile", (_, resp) => {
+//   const user = {
+//     name: "Aachman Mittal",
+//     email: "aachman@example.com",
+//     city: "Delhi",
+//     skills: [
+//       "html",
+//       "css",
+//       "js",
+//       "python",
+//       "elixir",
+//       "node",
+//       "django",
+//       "tailwindCSS",
+//     ],
+//   };
+//   resp.render("profile", { user });
+// });
 
-app.get("/profile", (_, resp) => {
-  const user = {
-    name: "Aachman Mittal",
-    email: "aachman@example.com",
-    city: "Delhi",
-    skills: [
-      "html",
-      "css",
-      "js",
-      "python",
-      "elixir",
-      "node",
-      "django",
-      "tailwindCSS",
-    ],
-  };
-  resp.render("profile", { user });
-});
+// app.get("/login", (_, resp) => {
+//   resp.render("login");
+// });
 
-app.get("/login", (_, resp) => {
-  resp.render("login");
-});
+// -------------------------------------------------------------Send Files
 
-app.get("/about", (_, resp) => {
-  resp.sendFile(path.join(publicPath, "about.html"));
-});
+// const path = require("path");
+// const publicPath = path.join(__dirname, "public");
 
-app.get("/help", (_, resp) => {
-  resp.sendFile(path.join(publicPath, "help.html"));
-});
+// app.get("", (_, resp) => {
+//   resp.sendFile(path.join(publicPath, "index.html"));
+// });
 
-app.get("*", (_, resp) => {
-  resp.sendFile(path.join(publicPath, "404.html"));
-});
+// app.get("/about", (_, resp) => {
+//   resp.sendFile(path.join(publicPath, "about.html"));
+// });
+
+// app.get("/help", (_, resp) => {
+//   resp.sendFile(path.join(publicPath, "help.html"));
+// });
+
+// app.get("*", (_, resp) => {
+//   resp.sendFile(path.join(publicPath, "404.html"));
+// });
+
+// --------------------------------------------------------Simple Response
 
 // app.get("", (req, resp) => {
 //   resp.send(`<h1>Hello ${req.query.name}, this is home page.</h1>`);
@@ -78,5 +83,11 @@ app.get("*", (_, resp) => {
 //     },
 //   ]);
 // });
+
+// -----------------------------------------------------------Static Files
+
+// app.use(express.static(publicPath))
+
+// -----------------------------------------------------------------------
 
 app.listen(5400);

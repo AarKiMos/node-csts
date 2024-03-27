@@ -27,9 +27,24 @@ const path = require("path");
 const dirPath = path.join(__dirname, "files");
 console.log(dirPath);
 
-for (let i = 0; i < 5; i++) {
-  fs.writeFileSync(
-    dirPath+"/"+`hello_${i}.txt`,
-    `This is a simple test file.\nThis is file number ${i}`
-  );
-}
+// for (let i = 0; i < 5; i++) {
+//   fs.writeFileSync(
+//     dirPath+"/"+`hello_${i}.txt`,
+//     `This is a simple test file.\nThis is file number ${i}`
+//   );
+// }
+
+// fs.readdir(dirPath, (err, files) => {
+//   console.log(files);
+// });
+
+fs.readdir(dirPath, (err, files) => {
+  files.forEach((file) => {
+    console.log("File name is ", file);
+    console.log(
+      "File content is :",
+      fs.readFileSync(path.join(dirPath, file), "utf-8")
+    );
+    console.log("");
+  });
+});

@@ -2,8 +2,7 @@ const express = require("express");
 const app = express();
 
 app.get("", (req, resp) => {
-  console.log("data sent by client:", req.query.name)
-  resp.send(`Hello ${req.query.name}, this is home page.`);
+  resp.send(`<h1>Hello ${req.query.name}, this is home page.</h1>`);
 });
 
 app.get("/about", (req, resp) => {
@@ -12,6 +11,26 @@ app.get("/about", (req, resp) => {
 
 app.get("/help", (req, resp) => {
   resp.send("Hello, this is help page.");
+});
+
+app.get("/json-obj", (req, resp) => {
+  resp.send({
+    name: "Aachman",
+    email: "aachman@example.com",
+  });
+});
+
+app.get("/json-array", (req, resp) => {
+  resp.send([
+    {
+      name: "Aachman",
+      email: "aachman@example.com",
+    },
+    {
+      name: "Aloha",
+      email: "aloha@example.com",
+    },
+  ]);
 });
 
 app.listen(5400);

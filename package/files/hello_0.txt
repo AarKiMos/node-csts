@@ -1,0 +1,2 @@
+This is a simple test file.
+This is file number 0

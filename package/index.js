@@ -50,12 +50,12 @@
 
 // 14. CRUD with FileSystem
 
-const { clear } = require("console");
-const fs = require("fs");
-const path = require("path");
+// const { clear } = require("console");
+// const fs = require("fs");
+// const path = require("path");
 
-const dirPath = path.join(__dirname, "crud_fs");
-const filePath = path.join(dirPath, "apple.txt");
+// const dirPath = path.join(__dirname, "crud_fs");
+// const filePath = path.join(dirPath, "apple.txt");
 
 // Create
 // fs.writeFileSync(filePath, "This is a simple text file");
@@ -77,3 +77,14 @@ const filePath = path.join(dirPath, "apple.txt");
 
 // Delete
 // fs.unlinkSync("<yourFileName>");
+
+// 15. Async Programming
+
+// console.log("Start exe...");
+
+// setTimeout(() => {
+//   console.log("Process exe...");
+// }, 2000);
+
+// console.log("Complete exe...");
+

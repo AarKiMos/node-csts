@@ -17,8 +17,22 @@ app.get("/profile", (_, resp) => {
     name: "Aachman Mittal",
     email: "aachman@example.com",
     city: "Delhi",
+    skills: [
+      "html",
+      "css",
+      "js",
+      "python",
+      "elixir",
+      "node",
+      "django",
+      "tailwindCSS",
+    ],
   };
-  resp.render("profile", {user});
+  resp.render("profile", { user });
+});
+
+app.get("/login", (_, resp) => {
+  resp.render("login");
 });
 
 app.get("/about", (_, resp) => {

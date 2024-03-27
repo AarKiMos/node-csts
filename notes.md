@@ -33,3 +33,6 @@
     - express.static()
 22. Remove extension (file extension) from URL and 404
 23. Template Engine (EJS)
+24. Dynamic Page using EJS
+    - Loops and Common header file
+25. 

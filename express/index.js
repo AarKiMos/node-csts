@@ -2,26 +2,32 @@ const express = require("express");
 const app = express();
 
 // -------------------------------------------------------------Middleware
+const routes = express.Router();
+const reqFilter = require("./middleware");
 
-const reqFilter = (req, resp, next) => {
-  if (!req.query.age) {
-    resp.send("Please provide age.");
-  } else if (req.query.age < 18) {
-    resp.send("You cannot access this page.");
-  } else {
-    next();
-  }
-};
-
-app.use(reqFilter);
+// app.use(reqFilter); //Application level middleware
 
 app.get("", (req, resp) => {
   resp.send("Welcome to Home Page.");
 });
 
-app.get("/users", (req, resp) => {
+// Route level middleware
+app.get("/users", reqFilter, (req, resp) => {
   resp.send("Welcome to Users Page.");
 });
+
+// Route group middleware
+routes.use(reqFilter);
+
+routes.get("/about", (req, resp) => {
+  resp.send("Welcome to About Page.");
+});
+
+routes.get("/contact", (req, resp) => {
+  resp.send("Welcome to Contact Page.");
+});
+
+app.use("/", routes);
 
 // -------------------------------------------------------------Render EJS
 

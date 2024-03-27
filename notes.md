@@ -36,3 +36,4 @@
 24. Dynamic Page using EJS
     - Loops and Common header file
 25. Middleware
+26. Route level middleware

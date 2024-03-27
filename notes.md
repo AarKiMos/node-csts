@@ -21,3 +21,4 @@
     - fs.readFileSync
 14. CRUD operations with File System
 15. Async Basic in NodeJS
+16. Handle async data in Node

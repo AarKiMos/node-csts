@@ -4,6 +4,7 @@
 // console.log("package.json".red);
 // console.warn("this is a warning");
 
+// --------------------------------------
 // 12. Input from command line
 
 // console.log("CSTS")
@@ -20,7 +21,9 @@
 //   console.error('Invalid input')
 // }
 
+// --------------------------------------
 // 13. Show File List
+
 // const fs = require("fs");
 // const path = require("path");
 // const dirPath = path.join(__dirname, "files");
@@ -48,6 +51,7 @@
 //   });
 // });
 
+// --------------------------------------
 // 14. CRUD with FileSystem
 
 // const { clear } = require("console");
@@ -78,6 +82,7 @@
 // Delete
 // fs.unlinkSync("<yourFileName>");
 
+// --------------------------------------
 // 15. Async Programming
 
 // console.log("Start exe...");
@@ -88,3 +93,19 @@
 
 // console.log("Complete exe...");
 
+// --------------------------------------
+// 16. Handle Async data
+
+let a = 20;
+let b = 0;
+
+let waitingData = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(30);
+  }, 2000);
+});
+
+waitingData.then((data) => {
+  b = data;
+  console.log(a + b);
+});

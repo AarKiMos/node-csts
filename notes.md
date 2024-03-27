@@ -7,6 +7,10 @@
 5. JS fundamentals in Node (Array, Loops etc.)
 6. Core Modules in Node (eg. fs)
 7. Create a server
-   * http module
+   - http module
 8. About `package.json`
-9. 
+9. A small challenge
+   - .gitignore and node_modules with git
+10. Nodemon package
+    - node is async?
+11. Make a simple API

@@ -14,3 +14,4 @@
 10. Nodemon package
     - node is async?
 11. Make a simple API
+12. Input from command line

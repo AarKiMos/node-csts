@@ -21,11 +21,10 @@
 // }
 
 // 13. Show File List
-const fs = require("fs");
-// fs.writeFileSync("apple.txt", "this is a apple file");
-const path = require("path");
-const dirPath = path.join(__dirname, "files");
-console.log(dirPath);
+// const fs = require("fs");
+// const path = require("path");
+// const dirPath = path.join(__dirname, "files");
+// console.log(dirPath);
 
 // for (let i = 0; i < 5; i++) {
 //   fs.writeFileSync(
@@ -38,13 +37,43 @@ console.log(dirPath);
 //   console.log(files);
 // });
 
-fs.readdir(dirPath, (err, files) => {
-  files.forEach((file) => {
-    console.log("File name is ", file);
-    console.log(
-      "File content is :",
-      fs.readFileSync(path.join(dirPath, file), "utf-8")
-    );
-    console.log("");
-  });
-});
+// fs.readdir(dirPath, (err, files) => {
+//   files.forEach((file) => {
+//     console.log("File name is ", file);
+//     console.log(
+//       "File content is :",
+//       fs.readFileSync(path.join(dirPath, file), "utf-8")
+//     );
+//     console.log("");
+//   });
+// });
+
+// 14. CRUD with FileSystem
+
+const { clear } = require("console");
+const fs = require("fs");
+const path = require("path");
+
+const dirPath = path.join(__dirname, "crud_fs");
+const filePath = path.join(dirPath, "apple.txt");
+
+// Create
+// fs.writeFileSync(filePath, "This is a simple text file");
+
+// Read
+// fs.readFile(filePath, "utf-8", (err, file) => {
+//   console.log(file);
+// });
+
+// Update
+// fs.appendFile(filePath, " and file name is apple.txt", (err) => {
+//   if (!err) console.log("file is updated");
+// });
+
+// Update (Rename)
+// fs.rename(filePath, path.join(dirPath, "fruit.txt"), (err) => {
+//   if (!err) console.log("file name is updated");
+// });
+
+// Delete
+// fs.unlinkSync("<yourFileName>");

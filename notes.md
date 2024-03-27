@@ -18,4 +18,6 @@
 13. Show file list
     - path module
     - fs.writeFileSync and fs.unlinkSync
-14. 
+    - fs.readFileSync
+14. CRUD operations with File System
+15. 

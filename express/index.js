@@ -4,7 +4,23 @@ const app = express();
 
 const publicPath = path.join(__dirname, "public");
 
-app.use(express.static(publicPath))
+// app.use(express.static(publicPath))
+
+app.get("", (_, resp) => {
+  resp.sendFile(path.join(publicPath, "index.html"));
+});
+
+app.get("/about", (_, resp) => {
+  resp.sendFile(path.join(publicPath, "about.html"));
+});
+
+app.get("/help", (_, resp) => {
+  resp.sendFile(path.join(publicPath, "help.html"));
+});
+
+app.get("*", (_, resp) => {
+  resp.sendFile(path.join(publicPath, "404.html"));
+});
 
 // app.get("", (req, resp) => {
 //   resp.send(`<h1>Hello ${req.query.name}, this is home page.</h1>`);

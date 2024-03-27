@@ -31,4 +31,4 @@
 21. Make HTML Pages (Send Whole HTML pages)
     - app.use()
     - express.static()
-22. 
+22. Remove extension (file extension) from URL and 404

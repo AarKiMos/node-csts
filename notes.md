@@ -32,3 +32,4 @@
     - app.use()
     - express.static()
 22. Remove extension (file extension) from URL and 404
+23. Template Engine (EJS)

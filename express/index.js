@@ -4,10 +4,21 @@ const app = express();
 
 const publicPath = path.join(__dirname, "public");
 
+app.set("view engine", "ejs");
+
 // app.use(express.static(publicPath))
 
 app.get("", (_, resp) => {
   resp.sendFile(path.join(publicPath, "index.html"));
+});
+
+app.get("/profile", (_, resp) => {
+  const user = {
+    name: "Aachman Mittal",
+    email: "aachman@example.com",
+    city: "Delhi",
+  };
+  resp.render("profile", {user});
 });
 
 app.get("/about", (_, resp) => {

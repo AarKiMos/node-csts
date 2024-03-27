@@ -22,3 +22,7 @@
 14. CRUD operations with File System
 15. Async Basic in NodeJS
 16. Handle async data in Node
+    - Promise
+17. How Node works
+    - Call Stack, Node API, Event Loop
+18. Express Js

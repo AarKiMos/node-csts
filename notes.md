@@ -28,3 +28,7 @@
 18. Express Js
 19. Express Routing - Request and Response
 20. Render HTML and JSON
+21. Make HTML Pages (Send Whole HTML pages)
+    - app.use()
+    - express.static()
+22. 

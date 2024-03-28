@@ -48,3 +48,4 @@
 35. Basic API with Node (using MongoDB) (GET)
 36. POST API (using MongoDB)
 37. PUT API (using MongoDB)
+38. DELETE API (using MongoDB)

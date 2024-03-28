@@ -41,3 +41,4 @@
 28. MongoDB Basic
 29. CRUD Operations in MongoDB
 30. Connect Node with MongoDB
+31. Read data from MongoDB

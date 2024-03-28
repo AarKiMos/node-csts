@@ -3,19 +3,24 @@ const app = express();
 
 // ----------------------------------------------------------------MongoDB
 
-const { MongoClient } = require("mongodb");
-const url = "mongodb://localhost:27017";
-const dbClient = new MongoClient(url);
+// const dbConnect = require('./mongodb')
 
-async function getData(database, collection) {
-  let result = await dbClient.connect();
-  let db = result.db(database);
-  let coll = db.collection(collection);
-  let resp = await coll.find({}).toArray();
-  console.log(resp);
-}
+// // With Async-Await
+// const main = async () => {
+//   let conn = await dbConnect('e-comm', 'products');
+//   let data = await conn.find().toArray();
+//   console.log(data);
+// };
 
-getData("e-comm", "products");
+// main();
+
+// // With Promises
+// dbConnect("e-comm", "products").then((conn) => {
+//   conn
+//     .find()
+//     .toArray()
+//     .then((data) => console.log(data));
+// });
 
 // -------------------------------------------------------------Middleware
 // const routes = express.Router();

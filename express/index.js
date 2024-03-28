@@ -1,33 +1,49 @@
 const express = require("express");
 const app = express();
 
+// ----------------------------------------------------------------MongoDB
+
+const { MongoClient } = require("mongodb");
+const url = "mongodb://localhost:27017";
+const dbClient = new MongoClient(url);
+
+async function getData(database, collection) {
+  let result = await dbClient.connect();
+  let db = result.db(database);
+  let coll = db.collection(collection);
+  let resp = await coll.find({}).toArray();
+  console.log(resp);
+}
+
+getData("e-comm", "products");
+
 // -------------------------------------------------------------Middleware
-const routes = express.Router();
-const reqFilter = require("./middleware");
+// const routes = express.Router();
+// const reqFilter = require("./middleware");
 
-// app.use(reqFilter); //Application level middleware
+// // app.use(reqFilter); //Application level middleware
 
-app.get("", (req, resp) => {
-  resp.send("Welcome to Home Page.");
-});
+// app.get("", (req, resp) => {
+//   resp.send("Welcome to Home Page.");
+// });
 
-// Route level middleware
-app.get("/users", reqFilter, (req, resp) => {
-  resp.send("Welcome to Users Page.");
-});
+// // Route level middleware
+// app.get("/users", reqFilter, (req, resp) => {
+//   resp.send("Welcome to Users Page.");
+// });
 
-// Route group middleware
-routes.use(reqFilter);
+// // Route group middleware
+// routes.use(reqFilter);
 
-routes.get("/about", (req, resp) => {
-  resp.send("Welcome to About Page.");
-});
+// routes.get("/about", (req, resp) => {
+//   resp.send("Welcome to About Page.");
+// });
 
-routes.get("/contact", (req, resp) => {
-  resp.send("Welcome to Contact Page.");
-});
+// routes.get("/contact", (req, resp) => {
+//   resp.send("Welcome to Contact Page.");
+// });
 
-app.use("/", routes);
+// app.use("/", routes);
 
 // -------------------------------------------------------------Render EJS
 

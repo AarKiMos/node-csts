@@ -44,3 +44,4 @@
 31. Read data from MongoDB
 32. Insert data in MongoDB
 33. Update data in MongoDB
+34. Delete data in MongoDB

@@ -46,3 +46,4 @@
 33. Update data in MongoDB
 34. Delete data in MongoDB
 35. Basic API with Node (using MongoDB) (GET)
+36. POST API (using Mongo)

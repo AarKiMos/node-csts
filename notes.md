@@ -42,3 +42,4 @@
 29. CRUD Operations in MongoDB
 30. Connect Node with MongoDB
 31. Read data from MongoDB
+32. Insert data in MongoDB

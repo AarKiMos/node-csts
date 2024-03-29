@@ -53,3 +53,4 @@
 40. CRUD with mongoose
 41. Post API with Mongoose
 42. GET, PUT and DELETE with Mongoose
+43. Search API with Multiple fields

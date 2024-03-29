@@ -36,4 +36,14 @@ app.put("/product/:_id", async (req, resp) => {
   resp.send(product);
 });
 
+app.get("/product/search/:key", async (req, resp) => {
+  let products = await Product.find({
+    $or: [
+      { name: { $regex: req.params.key } },
+      { brand: { $regex: req.params.key } },
+    ],
+  });
+  resp.send(products);
+});
+
 app.listen(5400);

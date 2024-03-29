@@ -50,3 +50,4 @@
 37. PUT API (using MongoDB)
 38. DELETE API (using MongoDB)
 39. Mongoose (Package)
+40. CRUD with mongoose

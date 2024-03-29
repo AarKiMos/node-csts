@@ -57,3 +57,6 @@
 44. Upload file (using multer)
 45. OS module
 46. Events and Event Emitter in NodeJs
+47. REPL (Read Eval Print Loop)
+    - .editor
+48.  

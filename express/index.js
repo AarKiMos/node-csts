@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
 
-// ------------------------------------------------------------Insert Data
-
+// --------------------------------------------------------------OS Module
+// const os = require("os");
+// console.log(os.freemem() / (1024 * 1024 * 1024));
+// console.log(os.totalmem() / (1024 * 1024 * 1024));
 
 // ----------------------------------------------------------------MongoDB
 

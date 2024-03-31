@@ -15,4 +15,22 @@ app.get("/", (req, resp) => {
   });
 });
 
+app.post("/", (req, resp) => {
+  const body = req.body;
+
+  pool.query(
+    "INSERT INTO users (name, password, user_type) VALUES ($1, $2, $3)",
+    [body.name, body.pass, body.type],
+    (err, result) => {
+      if (err) {
+        console.log(err);
+        resp.status(500);
+      } else {
+        resp.status(201).send("OK");
+        console.log(result);
+      }
+    }
+  );
+});
+
 app.listen(5400);

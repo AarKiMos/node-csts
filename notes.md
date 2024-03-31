@@ -61,3 +61,6 @@
     - .editor
 48. Connecting with MySQL (I will use PSQL)
 49. GET API with MySQL
+50. POST API with MySQL
+51. PUT API with MySQL
+52. DELETE API with MySQL

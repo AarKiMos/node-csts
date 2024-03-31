@@ -59,4 +59,5 @@
 46. Events and Event Emitter in NodeJs
 47. REPL (Read Eval Print Loop)
     - .editor
-48. Connecting with mySQL (I will use PSQL)
+48. Connecting with MySQL (I will use PSQL)
+49. GET API with MySQL
